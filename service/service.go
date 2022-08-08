@@ -4,8 +4,8 @@ import (
 	"crypto/sha1"
 	"errors"
 	"fmt"
-	"rest_api_golang_crud_sqlx/model"
-	"rest_api_golang_crud_sqlx/repository"
+	"sign_in/model"
+	"sign_in/repository"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"

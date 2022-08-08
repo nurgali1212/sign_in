@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"rest_api_golang_crud_sqlx/config"
-	"rest_api_golang_crud_sqlx/database"
-	"rest_api_golang_crud_sqlx/handler"
-	"rest_api_golang_crud_sqlx/repository"
-	"rest_api_golang_crud_sqlx/service"
+	"sign_in/config"
+	"sign_in/database"
+	"sign_in/handler"
+	"sign_in/repository"
+	"sign_in/service"
 )
 
 func main() {

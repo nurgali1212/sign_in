@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"rest_api_golang_crud_sqlx/service"
+	"sign_in/service"
 
 
 

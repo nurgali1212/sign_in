@@ -2,7 +2,7 @@ package database
 
 import (
 	"fmt"
-	"rest_api_golang_crud_sqlx/config"
+	"sign_in/config"
 	"time"
 
 	"github.com/golang-migrate/migrate/v4"
@@ -39,10 +39,11 @@ func (d *DB) InitDatabase(c *config.DB) *DB {
 			panic(err)
 		}
 	}
-	if err = m.Down(); err != nil {
-		if err.Error() != "no change" {
-			panic(err)
-		}
-	}
+	//FOR DELETE TABLE
+	// if err = m.Down(); err != nil {
+	// 	if err.Error() != "no change" {
+	// 		panic(err)
+	// 	}
+	// }
 	return d
 }

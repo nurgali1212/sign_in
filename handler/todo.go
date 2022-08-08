@@ -2,7 +2,7 @@ package handler
 
 import (
 	"net/http"
-	"rest_api_golang_crud_sqlx/model"
+	"sign_in/model"
 
 	"github.com/gin-gonic/gin"
 )
@@ -27,7 +27,7 @@ func (h *Handler) signUp(c *gin.Context) {
 }
 
 type signInInput struct {
-	
+
 	Username string `json:"username" binding:"required"`
 	Password string `json:"password" binding:"required"`
 }
