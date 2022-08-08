@@ -32,9 +32,14 @@ func (d *DB) InitDatabase(c *config.DB) *DB {
 
 	m, err := migrate.New("file://migrate", source)
 	if err != nil {
-		panic("TABLWE ZHOKQ")
+		panic("TABLE NOT FOUND")
 	}
 	if err = m.Up(); err != nil {
+		if err.Error() != "no change" {
+			panic(err)
+		}
+	}
+	if err = m.Down(); err != nil {
 		if err.Error() != "no change" {
 			panic(err)
 		}

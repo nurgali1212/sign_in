@@ -3,6 +3,8 @@ package handler
 import (
 	"rest_api_golang_crud_sqlx/service"
 
+
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -15,13 +17,15 @@ func NewHandler(service *service.Service) *Handler {
 }
 
 func (h *Handler) SetupRouter() *gin.Engine {
-	router := gin.Default()
+	router := gin.New()
+
+
 
 	auth := router.Group("/auth")
 	{
 		auth.POST("/sign-up", h.signUp)
 		auth.POST("/sign-in", h.signIn)
 	}
-	
+
 	return router
 }
